@@ -15,11 +15,11 @@ const bots = {
   90288: "yande.re",
 };
 
-const uploadMissingFile = () => {
+const uploadMissingFile = async () => {
   console.log("Start Upload File");
   const array = obj.slice(1291, 5000);
 
-  await Promise.mapSeries(
+  await Promise.map(
     array,
     async (element) => {
       let from = "";
@@ -44,24 +44,25 @@ const uploadMissingFile = () => {
           break;
       }
 
-      if(process.env.name === 'danbooru'){
+      if (process.env.name === "danbooru") {
         await danbooru.download({ md5: element.md5, from });
       }
 
-      if(process.env.name === 'rule34'){
+      if (process.env.name === "rule34") {
         await rule34.download({ md5: element.md5, from });
       }
 
-      if(process.env.name === 'gelbooru'){
+      if (process.env.name === "gelbooru") {
         await gelbooru.download({ md5: element.md5, from });
       }
-      
-      if(process.env.name === 'yandere'){
+
+      if (process.env.name === "yandere") {
         await yandere.download({ md5: element.md5, from });
       }
-    }
+    },
+    { concurrency: 10 }
   );
-  
+
   console.log("Start Upload Success");
 };
 

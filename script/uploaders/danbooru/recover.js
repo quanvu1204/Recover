@@ -19,8 +19,6 @@ async function download({ md5, from }) {
       }
     );
 
-    console.log("danbooruPostMD5URL", danbooruPostMD5URL);
-
     let url = new URL(danbooruPostMD5URL.url);
     const currentID = /posts\/(\d+)*/.exec(url.pathname)[1];
 
