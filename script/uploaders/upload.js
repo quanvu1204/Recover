@@ -5,7 +5,7 @@ const gelbooru = require("./gelbooru/recover");
 const yandere = require("./yandere/recover");
 
 var fs = require("fs");
-var obj = JSON.parse(fs.readFileSync("wrong-posts-bot.txt", "utf8"));
+var array = JSON.parse(fs.readFileSync("wrong-posts-bot.txt", "utf8"));
 
 const bots = {
   322790: "gelbooru",
@@ -17,7 +17,6 @@ const bots = {
 
 const uploadMissingFile = async () => {
   console.log("Start Upload File");
-  const array = obj.slice(1291, 5000);
 
   await Promise.map(
     array,
