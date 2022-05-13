@@ -1,0 +1,44 @@
+{
+  "name": "guardian-api",
+  "version": "1.3.8",
+  "description": "Just an API...",
+  "main": "node server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "14.15.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notWolfxd/Sankaku-Scripts"
+  },
+  "author": "Winter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notWolfxd/Sankaku-Scripts/issues"
+  },
+  "homepage": "https://github.com/notWolfxd/Sankaku-Scripts.git",
+  "dependencies": {
+    "amqplib": "^0.6.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "download": "^8.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "form-data": "^4.0.0",
+    "http-server": "^13.0.1",
+    "jsdom": "^19.0.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.2.4",
+    "path": "^0.12.7",
+    "pg": "^8.5.1",
+    "pg-promise": "^10.5.6",
+    "pm2": "^5.2.0",
+    "xml-js": "^1.6.11"
+  }
+}

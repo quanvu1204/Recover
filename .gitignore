@@ -1,0 +1,7 @@
+/bot
+/script/image-store
+.env
+api/.env
+/node_modules
+/script/maitenance-disabled/post-history-cleaner.js
+script/lib

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./api/public/stylesheets/style.css" />
+    <link rel="shortcut icon" href="https://chan.sankakucomplex.com/favicon.png">
+    <title>Sankaku | Script Statistics</title>
+  </head>
+  <body>
+    <div id="header">
+      <span id="identifier">Statistics</span>
+    </div>
+    <div id="notice">
+    </div>
+    <div id="search" style="">
+      <form action="http://38.242.12.122:8070/statistics">
+        <table class="form" style="width: 80%; margin-left: 10%">
+          <tfoot>
+            <tr>
+              <td>
+                <input name="commit" type="submit" value="Search">
+              </td>
+              <td>
+              </td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <th width="15%">
+                <label for="service">Service</label>
+              </th>
+              <td width="85%">
+                <select id="service" name="service">
+                  <option value="">Any</option>
+                  <option value="shuushuu">E-Shuushuu</option>
+                  <option value="zerochan">Zerochan</option>
+                  <option value="yandere">Yande.re</option>
+                  <option value="rule34">Rule34</option>
+                  <option value="gelbooru">Gelbooru</option>
+                  <option value="danbooru">Danbooru</option>
+                  <option value="safebooru">Safebooru</option>
+                  <option value="e621">e621</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <button id="reset" onclick="resetService()">Reset ALL Fail Count</button>
+    </div>
+    <div id="app">
+    </div>
+  </body>
+  <script src="./api/public/javascripts/stats.js"></script>
+</html>

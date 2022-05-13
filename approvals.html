@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./api/public/stylesheets/style.css" />
+    <link rel="shortcut icon" href="https://chan.sankakucomplex.com/favicon.png">
+    <title>Sankaku | Pending Remote Posts</title>
+  </head>
+  <body>
+    <div id="header">
+      <span id="identifier">Rule34 Pending Posts</span>
+    </div>
+    <div id="notice">
+    </div>
+    <div id="search" style="">
+      <form action="http://38.242.12.122:8070/approvals">
+        <table class="form" style="width: 80%; margin-left: 10%">
+          <tfoot>
+            <tr>
+              <td>
+                <input name="commit" type="submit" value="Search">
+              </td>
+              <td>
+              </td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <th width="15%">
+                <label for="service">Remote Site</label>
+              </th>
+              <td width="85%">
+                <input id="service" name="service" size="40" type="text" placeholder="Currently only supports rule34..">
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="reason">Reason</label>
+              </th>
+              <td>
+                <select id="reason" name="reason">
+                  <option value="" selected="">Any</option>
+                  <option value="1">Insufficient tags</option>
+                  <option value="2">Insufficient score</option>
+                  <option value="3">Other</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="rating">Rating</label>
+              </th>
+              <td>
+                <select id="rating" name="rating">
+                  <option value="any">Any</option>
+                  <option value="e">R18+</option>
+                  <option value="q">R15</option>
+                  <option value="s">G</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="order">Order</label>
+              </th>
+              <td>
+                <select id="order" name="order">
+                  <option value="stored_at_asc" selected="">Date ASC</option>
+                  <option value="stored_at_desc">Date DESC</option>
+                  <option value="score_asc">Score ASC</option>
+                  <option value="score_desc">Score DESC</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div id="app">
+    </div>
+  </body>
+  <script src="./api/public/javascripts/min.js"></script>
+</html>
